@@ -1,0 +1,20 @@
+---
+tab: about-us
+title: About Us
+---
+
+{% for type in site.our_photos %}
+<h2 class="mt-5">{{ type.type_name }}</h2>
+<div class="container">
+    <div class="row g-3">
+        {% for photo in type.phtotos %}
+        <div class="col-4">
+            <div class="card h-100">
+                <img class="card-img-top {% if type.round_photo %}rounded-circle{% endif %}" src="/assets/{{ photo.photo }}">
+                <div class="card-footer mt-auto d-flex"><span>{{ photo.name }}</span><span class="ms-auto">{{ photo.title }}</span></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
