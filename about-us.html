@@ -1,0 +1,40 @@
+---
+tab: about-us
+title: About Us
+---
+
+{% for type in site.our_photos %}
+
+<div class="card mt-5">
+    <div class="card-header">
+        <h2>{{ type.type_name }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            {% for photo in type.phtotos %}
+            <div class="col-4">
+                <div class="card h-100">
+                    <img class="card-img-top {% if type.round_photo %}rounded-circle{% endif %}" src="/assets/{{ photo.photo }}" style="object-fit: cover; aspect-ratio : 1 / 1; {% if photo.photo_position %}object-position: {{ photo.photo_position }};{% endif %}">
+                    <div class="card-header mt-auto d-flex">
+                        {% if photo.link %}
+                        <a href="{{ photo.link }}" class="card-link stretched-link" target="_blank">{{ photo.name }}</a>
+                        {% else %}
+                        {{ photo.name }}
+                        {% endif %}
+                        <span class="ms-auto">{{ photo.title }}</span>
+                    </div>
+                    {% if photo.description_md %}
+                    <div class="card-body">
+                        <div class="card-text">
+                            {% capture description_md %}{% include {{ photo.description_md }} %}{% endcapture %}
+                            {{ description_md | markdownify }}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}

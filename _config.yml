@@ -1,0 +1,96 @@
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+      excerpt_separator: <!--more-->
+  - scope:
+      path: ''
+      type: posts
+    values:
+      tab: news
+      is_post: true
+
+title: Seattle Chinese Volleyball Club
+
+tabs:
+  - id: news
+    name: News
+  - id: activities
+    name: Activities
+  - id: skill-levels
+    name: Skill Levels
+  - id: about-us
+    name: About Us
+  - id: donate
+    name: Donate
+
+social_links:
+  - name: Official Website
+    url: https://scvc.ngo
+  - name: Email
+    icon: envelope
+    url: mailto:contact@scvc.ngo
+  - name: Game Signup
+    url: https://joingame.azurewebsites.net
+  - name: YouTube
+    url: https://www.youtube.com/@scvc-ngo
+  - name: Facebook
+    url: https://facebook.com/scvc.ngo
+  - name: Facebook Group
+    url: https://facebook.com/groups/scvc.ngo
+  - name: Instagram
+    url: https://www.instagram.com/scvc.ngo
+  - name: 小红书
+    url: https://www.xiaohongshu.com/user/profile/6533a691000000000400b9fe
+
+activity_cards:
+  - id: practice
+    name: Volleyball Practice
+  - id: open-gym
+    name: Volleyball Open Gym
+  - id: tournament
+    name: Volleyball Tournament
+
+our_photos:
+  - type_name: Officers
+    round_photo: true
+    phtotos:
+      - name: 'Yuecong "Arch" Wu'
+        title: President
+        photo: about-us-officer-arch.jpg
+      - name: 'Austin "HP" He'
+        title: Treasurer
+        photo: about-us-officer-hp.jpg
+      - name: Cong Deng
+        title: COO
+        photo: about-us-officer-dc.jpg
+      - name: You Guan
+        title: Secretary
+        photo: about-us-officer-gy.jpg
+      - name: Haoshu Zhao
+        title: CTO
+        photo: about-us-officer-hs.jpg
+        photo_position: 0 0
+      - name: Serena Yang
+        title: External PR
+        photo: about-us-officer-sy.jpg
+  - type_name: Coaches | Advisors
+    round_photo: true
+    phtotos:
+      - name: Man Zuo
+        title: Advisor
+        photo: about-us-coach-zm.jpg
+        link: https://baike.baidu.com/item/左曼
+        description_md: about-us-coach-zm.md
+  - type_name: Board of Directors
+    phtotos:
+      - name: Hailin Jiang
+        title: Director
+        photo: about-us-bod-hl.jpg
+      - name: Terence Chen
+        title: Director
+        photo: about-us-bod-sg.jpg
+      - name: Mingjuan Li
+        title: Director
+        photo: about-us-bod-mj.jpg

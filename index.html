@@ -1,0 +1,46 @@
+---
+hide_head_title: true
+title: <p>Welcome to Seattle Chinese Volleyball Club</p><p>西雅图华人排球俱乐部欢迎您</p>
+---
+
+<div class="card mt-5">
+    <div class="card-header">
+        <h2><a class="stretched-link" href="/news">News</a></h2>
+    </div>
+    <div class="card-body">
+        <div class="row gx-3">
+            {% for post in site.posts limit:2 %}
+            <div class="col-4">
+                {% include post-card.html post=post %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="card mt-5">
+    <div class="card-header">
+        <h2><a class="stretched-link" href="/activities">Activities</a></h2>
+    </div>
+    <div class="card-body">
+        <div class="row gx-3">
+            {% for activity in site.activity_cards %}
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/assets/activity-{{ activity.id }}.jpg" style="object-fit: cover; aspect-ratio : 1 / 1;">
+                    <div class="card-footer mt-auto">{{ activity.name }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="card mt-5">
+    <div class="card-header">
+        <h2><a class="stretched-link" href="/about-us">Our Story</a></h2>
+    </div>
+    <div class="card-body">
+        <p class="card-text">The Seattle Chinese Volleyball Club (SCVC) is a non-profit organization dedicated to promoting the sport of volleyball within the Chinese community and beyond. Our mission is to provide opportunities for individuals of all skill levels to learn, play, and excel in volleyball. Through inclusive programs, competitive events, and community outreach, we aim to inspire a love for the game and create lasting connections among our members in the greater Seattle area.</p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="card {% if include.large %}mt-3{% else %}h-100{% endif %}">
+    <{% if include.large %}h2{% else %}h3{% endif %} class="card-header">
+        <a class="card-link stretched-link" href="{{ include.post.url }}">{{ include.post.title }}</a>
+    </{% if include.large %}h2{% else %}h3{% endif %}>
+    <div class="card-body">
+        <div class="card-title"><strong>Published:</strong> {{ include.post.date | date: '%Y-%m-%d' }}</div>
+        <div class="row">
+            {% if include.post.thumbnail and include.large %}
+            <div class="col-3">
+                <img class="img-fluid" src="{{ include.post.thumbnail }}">
+            </div>
+            {% endif %}
+            <div class="col">
+                {{ include.post.excerpt }}
+                <p class="card-text text-body-secondary">Continue Reading...</p>
+            </div>
+        </div>
+    </div>
+</div>
